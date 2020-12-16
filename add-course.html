@@ -1,0 +1,929 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Add Course</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
+	<link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
+	<link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/smart-forms.css">
+	<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/font-awesome.min.css">
+	<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/172203/smart-forms.css">
+
+	<link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+
+	<link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+
+	<link rel="stylesheet" href="plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
+	<link href="plugins/wizard/steps.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="dist/css/theme-en.css">
+
+	<script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+	<div class="wrapper">
+		<header class="header-top" header-theme="light">
+			<div class="container-fluid">
+				<div class="d-flex justify-content-between">
+					<div class="top-menu d-flex align-items-center">
+						<button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+					</div>
+
+					<div class="top-menu d-flex align-items-center userDrops">
+						<div class="dropdown mr-20">
+							<a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.png"
+									alt=""></a>
+							<div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="instructor-profile.html"><i class="ik ik-user dropdown-icon"></i>instructor
+									profile</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-lock dropdown-icon"></i>change
+									password</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i>Log Out</a>
+							</div>
+						</div>
+
+						<div class="dropdown spDroplist">
+							<a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
+							<div class="dropdown-menu dropdown-menu-left animated bounceInDown">
+								<ul class="list-unstyled">
+									<li><a>English</a></li>
+									<li><a>العربية</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+									class="ik ik-bell"></i><span class="badge bg-danger">2</span></a>
+							<div class="dropdown-menu dropdown-menu-left notification-dropdown"
+								aria-labelledby="notiDropdown">
+								<h4 class="header">notifications</h4>
+								<div class="notifications-wrap">
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting 2</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+								</div>
+								<div class="footer"><a href="notifications.html">See All</a></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="page-wrap">
+			<div class="app-sidebar colored">
+				<div class="sidebar-header">
+					<a class="header-brand" href="#">
+						<div class="logo-img">
+							<img src="src/img/logo.png" class="header-brand-img" alt="">
+						</div>
+						<span class="text">BFCAI</span>
+					</a>
+					<button type="button" class="nav-toggle"><i data-toggle="expanded"
+							class="ik ik-toggle-right toggle-icon"></i></button>
+					<button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+				</div>
+
+
+				<div class="sidebar-content">
+					<div class="nav-container">
+						<nav id="main-menu-navigation" class="navigation-main">
+							<div class="nav-item active">
+								<a href="d-instructore.html"><i class="ik ik-home"></i><span>Home</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-book"></i><span>My Material</span></a>
+								<div class="submenu-content">
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">First
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-35 ofwhite">GIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item "><span>Lecture</span></a>
+													<a href="#"
+														class="menu-item "><span>Section</span></a>
+												</div>
+											</div>
+											<div class="nav-item">
+												<a href="add-course.html"><i class=""></i><span class="ml-35 ofwhite">Add
+														Course</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">Second
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-25">BIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item"><span>Lecture</span></a>
+													<a href="#"
+														class="menu-item"><span>Section</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="nav-item">
+								<a href="notifications.html"><i class="ik ik-bell"></i><span>Notifactions</span><span
+										class="badge bg-danger">4</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-mail"></i><span>Messages</span><span
+										class="badge bg-danger">34</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-circle"></i><span>Chat Room</span><span
+										class="badge bg-danger">+99</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="students.html"><i class="ik ik-users"></i><span>Students</span></a>
+							</div>
+							<div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-message-square"></i><span>Questions Bank</span></a>
+                                <div class="submenu-content">
+                                    <a href="question-bank.html"
+                                        class="menu-item"><span>Questions</span><span
+										class="badge bg-danger">15</span></a>
+                                    <a href="answer-question-bank.html"
+                                        class="menu-item"><span>Answers</span></a>
+                                </div>
+                            </div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-bookmark"></i><span>Announcments</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-info"></i><span>Assigments Result</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-clipboard"></i><span>Quiz</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-square"></i><span>Feedback</span><span
+										class="badge bg-danger">140</span></a>
+							</div>
+
+						</nav>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="page-header">
+						<div class="row align-items-end">
+							<div class="col-lg-8">
+								<div class="page-header-title">
+									<i class="ik ik-upload bg-blue"></i>
+									<div class="d-inline">
+										<h2>Add Course</h2>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<nav class="breadcrumb-container" aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="d-instructore.html"><i class="ik ik-home"></i></a>
+										</li>
+										<li class="breadcrumb-item" aria-current="page">Add Course</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Customer overview start -->
+					<div class="row mt-40">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h3>Add Course :</h3>
+									<div class="card-header-right">
+										<ul class="list-unstyled card-option">
+											<li><i class="ik ik-minus minimize-card"></i></li>
+										</ul>
+									</div>
+								</div>
+								<div class="card-body wizard-content vtab-steps-Container">
+									<div class="dd" data-plugin="nestable">
+
+
+
+
+										<form class="vertical-tab-steps wizard-notification wizard clearfix vertical">
+											
+											<section>
+
+
+												<!-- ============================================================== -->
+												<!-- start New Row -->
+												<div class="row">
+													<div class="col-md-10 offset-md-1">
+
+														<div class="row">
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="name">Course Name :</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-book-open"></i>
+																			</div>
+																		</div>
+																		<input id="name" name="name" placeholder="Course Name"
+																			type="text" required="required"
+																			class="form-control">
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="age">Course ID :</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-edit"></i>
+																			</div>
+																		</div>
+																		<input value="" type="text" 
+																			name="C_Id" placeholder="Course Id"
+																			class="form-control" required>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="img">Course Image :</label>
+
+																	<input type="file" name="pic"
+																		class="file-upload-default">
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-camera"></i>
+																			</div>
+																		</div>
+																		<input type="text"
+																			class="form-control file-upload-info"
+																			placeholder="Course Pic"
+																			disabled>
+																		<span class="input-group-append">
+																			<button
+																				class="file-upload-browse btn btn-primary"
+																				type="button">Select the image</button>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="projectIdea">Course Description : <i
+																			data-toggle="tooltip" data-placement="top"
+																			title="Explain the project idea"
+																			class="ik ik-info mx-2"></i></label>
+																	<textarea name="C_Disc"
+																		placeholder="" type="text" class="form-control"
+																		required></textarea>
+																</div>
+															</div>
+
+
+														</div>
+
+
+													</div>
+												</div>
+
+
+											</section>
+
+											<div class="form-group text-center">
+												<label class="col-md-3 control-label"></label>
+												<div class="col-md-9">
+												  <button type="submit" class="btn btn-primary btn-lg ehab" value="Save">Save</button>
+												</div>
+											</div>
+											
+											
+										</form>
+
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Customer overview end -->
+
+
+
+				</div>
+			</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/popper.js/dist/umd/popper.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script
+		src="http://www.aljdwa.com/jdwatec/dashboard/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/screenfull/dist/screenfull.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script
+		src="http://www.aljdwa.com/jdwatec/dashboard/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/moment/moment.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+	<script
+		src="http://www.aljdwa.com/jdwatec/dashboard/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/datedropper/datedropper.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/jquery.repeater/jquery.repeater.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/js/form-picker.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/dist/js/theme.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/js/alerts.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/js/form-components.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/autocalc/jautocalc.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/plugins/wizard/jquery.steps.min.js"></script>
+	<script src="http://www.aljdwa.com/jdwatec/dashboard/js/jquery.validate.min.js"></script>
+
+	<script> $( '#advanced_table' ).DataTable( { "language": { "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/English.json" } } ); </script>
+	<script>
+		$( ".tab-entrepreneurs,.tab-investors" ).steps( {
+			headerTag: "h6",
+			bodyTag: "section",
+			enableAllSteps: false,
+			enablePagination: true,
+			enableKeyNavigation: true,
+			enableFinishButton: true,
+			forceMoveForward: false,
+			anchorSettings: {
+				anchorClickable: true,
+				enableAllAnchors: true,
+				markDoneStep: true,
+				enableAnchorOnDoneStep: true
+			}
+			, transitionEffect: "fade"
+			, titleTemplate: '<span class="step">#index#</span> #title#'
+			, labels: {
+				cancel: "Cancel",
+				current: "site.الخطوة_الحالية:",
+				pagination: "Numbering",
+				finish: "Send",
+				next: "Next",
+				previous: "previous",
+				loading: "Loading ...."
+			}
+			, onFinished: function ( event, currentIndex )
+			{
+				var form = $( this );
+				// Submit form input
+				form.submit();
+
+			}
+
+		} );
+
+		/******/
+		$( ".tab-create" ).steps( {
+			headerTag: "h6",
+			bodyTag: "section",
+			enableAllSteps: false,
+			enablePagination: true,
+			enableKeyNavigation: true,
+			enableFinishButton: true,
+			forceMoveForward: false,
+			anchorSettings: {
+				anchorClickable: true,
+				enableAllAnchors: true,
+				markDoneStep: true,
+				enableAnchorOnDoneStep: true
+			}
+			, transitionEffect: "fade"
+			, titleTemplate: '<span class="step">#index#</span> #title#'
+			, labels: {
+				cancel: "Cancel",
+				current: "site.الخطوة_الحالية:",
+				pagination: "Numbering",
+				finish: "Finish and save",
+				next: "Next",
+				previous: "Previous",
+				loading: "Loading ...."
+			}
+			, onFinished: function ( event, currentIndex )
+			{
+				var form = $( this );
+				// Submit form input
+				form.submit();
+
+			}
+
+		} );
+		/******/
+		$( ".tab-edit" ).steps( {
+			headerTag: "h6",
+			bodyTag: "section",
+			enableAllSteps: true,
+			enablePagination: true,
+			enableKeyNavigation: true,
+			enableFinishButton: true,
+			forceMoveForward: false,
+			anchorSettings: {
+				anchorClickable: true,
+				enableAllAnchors: true,
+				markDoneStep: true,
+				enableAnchorOnDoneStep: true
+			}
+			, transitionEffect: "fade"
+			, titleTemplate: '<span class="step">#index#</span> #title#'
+			, labels: {
+				cancel: "Cancel",
+				current: "site.الخطوة_الحالية:",
+				pagination: "Numbering",
+				finish: "Finish and save",
+				next: "Next",
+				previous: "Previous",
+				loading: "Loading ...."
+			}
+			, onFinished: function ( event, currentIndex )
+			{
+				var form = $( this );
+				// Submit form input
+				form.submit();
+
+			}
+
+		} );
+		$( ".vertical-tab-steps" ).steps( {
+			headerTag: "h6",
+			bodyTag: "section",
+			enableAllSteps: true,
+			enablePagination: true,
+			enableKeyNavigation: true,
+			enableFinishButton: true,
+			forceMoveForward: false,
+			anchorSettings: {
+				anchorClickable: true,
+				enableAllAnchors: true,
+				markDoneStep: true,
+				enableAnchorOnDoneStep: true
+			}
+			, transitionEffect: "fade"
+			, titleTemplate: '<span class="step">#index#</span> #title#'
+			, labels: {
+				cancel: "Cancel",
+				current: "site.الخطوة_الحالية:",
+				pagination: "Numbering",
+				finish: "Finish and save",
+				next: "Next",
+				previous: "previous",
+				loading: "Loading ...."
+			}
+			, onFinished: function ( event, currentIndex )
+			{
+				var form = $( this );
+				// Submit form input
+				form.submit();
+
+			}
+
+		} );
+	</script>
+
+
+	<script>
+		$( document ).ready( function ()
+		{
+			$( ".image" ).change( function ()
+			{
+				if ( this.files && this.files[ 0 ] ) {
+					var reader = new FileReader();
+					reader.onload = function ( e )
+					{
+						$( '.image-preview' ).attr( 'src', e.target.result );
+					}
+					reader.readAsDataURL( this.files[ 0 ] );
+				}
+			} );
+
+			$( '.tab-create .repeater:not(.tab-create .repeater.NotFilled)' ).repeater( {
+				initEmpty: false,
+				show: function ()
+				{
+					$( this ).slideDown();
+				},
+				hide: function ( deleteElement )
+				{
+					if ( confirm( 'Are you sure you want to delete this element?' ) ) {
+						$( this ).slideUp( deleteElement );
+					}
+				},
+				isFirstItemUndeletable: true
+			} );
+
+			$( '.tab-create .repeater:not(.tab-create .firstFillIt):not(.tab-create .otherRowinput .repeater)' ).repeater( {
+				initEmpty: true,
+				show: function ()
+				{
+					$( this ).slideDown();
+				},
+				hide: function ( deleteElement )
+				{
+					if ( confirm( 'Are you sure you want to delete this element?' ) ) {
+						$( this ).slideUp( deleteElement );
+					}
+				},
+				isFirstItemUndeletable: true
+			} );
+
+			$( '.tab-edit .repeater' ).repeater( {
+				initEmpty: false,
+				show: function ()
+				{
+					$( this ).slideDown();
+				},
+				hide: function ( deleteElement )
+				{
+					if ( confirm( 'Are you sure you want to delete this element?' ) ) {
+						$( this ).slideUp( deleteElement );
+					}
+				},
+				isFirstItemUndeletable: true
+			} );
+
+			autoCalcSetup();
+			$( 'body' ).on( 'click', '.btn-addMoreField', function ()
+			{
+				setTimeout( function ()
+				{
+					autoCalcSetup();
+				}, 300 );
+			} );
+
+			$( '.border-checkbox-group .showOtherFiled' ).change( function ()
+			{
+				var row = $( this ).closest( 'div' ).next();
+				if ( !this.checked )
+					row.fadeOut( 'normal' );
+				else
+					row.fadeIn( 'normal' );
+			} ).change();
+
+			/** click next to check Validity **/
+			$( 'a[href="#next"]' ).click( function ( event )
+			{
+				//Fetch form to apply custom Bootstrap validation
+				var form = $( ".tab-wizard" )
+				if ( form[ 0 ].checkValidity() === false ) {
+					event.preventDefault()
+					event.stopPropagation()
+				}
+				form.addClass( 'was-validated' );
+				//Perform ajax submit here...
+
+			} );
+		} );
+
+
+		/** confirm delete row **/
+		$( '#deleteRow' ).on( 'shown.bs.modal', function ( e )
+		{
+			// store the clicked element as data on the confirm button
+			$( '#confirmDeleteBtn' ).data( 'triggered-from', e.relatedTarget );
+		} );
+
+		$( "#confirmDeleteBtn" ).click( function ()
+		{
+			// retrieve the button that triggered the action and use it
+			var trigger = $( this ).data( 'triggered-from' );
+			$( trigger ).closest( 'tr' ).remove();
+			autoCalcSetup();
+			$( '#deleteRow' ).modal( 'hide' );
+		} );
+
+		/** sticky progress bar **/
+		$( document ).ready( function ()
+		{
+			var stickyNavTop = $( '.progress' ).offset().top;
+			var stickyNav = function ()
+			{
+				var scrollTop = $( window ).scrollTop();
+				if ( scrollTop > stickyNavTop ) {
+					$( '.progress' ).addClass( 'sticky' );
+				} else {
+					$( '.progress' ).removeClass( 'sticky' );
+				}
+			};
+			stickyNav();
+			$( window ).scroll( function ()
+			{
+				stickyNav();
+			} );
+		} );
+
+
+		/** autoCalc **/
+		function autoCalcSetup()
+		{
+			$( 'table' ).jAutoCalc( 'destroy' );
+			$( 'table tr' ).jAutoCalc( {
+				decimalPlaces: 2,
+				emptyAsZero: true
+			} );
+			$( 'table' ).jAutoCalc( {
+				decimalPlaces: 2,
+				emptyAsZero: true
+			} );
+		}
+
+	</script>
+
+	<script>
+		var validation_elements, progress_bar_value = 0;
+
+		var validator = [
+			// "input[type='text']:not(table input[type='text'], #otherField, #otherProjectActivity)",
+
+			"input[type='text']:not(table input[type='text']):not(.otherRowinput input[type='text']):not(.projectlogoDiv input[type='text'].file-upload-info)",
+			"input[type='email']:not(table input[type='email'])",
+			"input[type='checkbox']:not(fieldset.js-identifier-checkbox input[type='checkbox'])",
+			"fieldset.js-identifier-checkbox",
+			"select:not(table select)",
+			"form textarea",
+			"form table",
+		]
+
+		validation_elements = validator.map( function ( e )
+		{
+			return $( e ).get().length
+		} )
+
+		var total_elements = validation_elements.reduce( ( a, b ) => a + b )
+		var per_element_percentage = 100 / total_elements;
+
+
+		function initFormValidate()
+		{
+
+			for ( var i = 0; i < validator.length; i++ ) {
+
+				$( validator[ i ] ).each( function ( i, e )
+				{
+					// console.log('total_elements', total_elements, i, $(e)[0].nodeName)
+					if (
+						$( e )[ 0 ].nodeName === "SELECT"
+						|| $( e )[ 0 ].nodeName === "FIELDSET"
+						|| $( e )[ 0 ].nodeName === "TABLE" ) {
+						$( e ).on( 'change', function ()
+						{
+							validate_element_and_update_progress_bar( e )
+						} )
+					}
+					if (
+						$( e )[ 0 ].nodeName === "INPUT"
+						|| $( e )[ 0 ].nodeName === "TEXTAREA"
+					) {
+						$( e ).on( 'input', function ()
+						{
+							validate_element_and_update_progress_bar( e )
+						} )
+					}
+				} )
+			}
+
+			$( '.btn.btn-success.btn-addMoreField' ).on( 'click', function ( e )
+			{
+				e.preventDefault();
+				var element = $( e.target ).closest( '.form-group' ).siblings( 'table' )
+				setTimeout( function ()
+				{
+					autoCalcSetup();
+					validate_element_and_update_progress_bar( element )
+				}, 1000 );
+
+				// initFormValidate()
+			} )
+
+			/* fire chage event for default set elements*/
+			setTimeout( function ()
+			{
+				$( "input[type='text']:not(table input[type='text']):not(.otherRowinput input[type='text']):not(.projectlogoDiv input[type='text'].file-upload-info)" ).not( '[readonly]' ).trigger( 'input' )
+				$( 'input[type="checkbox"]' ).trigger( 'change' )
+				$( 'select' ).trigger( 'change' )
+				$( 'form table input' ).trigger( 'change' )
+				$( 'textarea' ).trigger( 'input' )
+			} )
+		}
+
+		function progress_bar_update( value )
+		{
+			$( '.progress-bar' ).css( { 'width': value + '%' } );
+			$( '.progress-value, #FStudyProgress' ).text( Number( value ).toFixed( 2 ) + '%' )
+			$( '#FStudyProgress' ).attr( 'value', Number( value ).toFixed( 2 ) )
+		}
+
+		function injectTrim( handler )
+		{
+			return function ( element, event )
+			{
+				if ( element.tagName === "TEXTAREA" || ( element.tagName === "INPUT"
+					&& element.type !== "password" ) ) {
+					element.value = $.trim( element.value );
+				}
+				return handler.call( this, element, event );
+			};
+		}
+
+		function validate_element_and_update_progress_bar( e )
+		{
+			// console.log($(e)[0].nodeName, $(e).valid(), e.value, 'update-progress')
+			switch ( $( e )[ 0 ].nodeName ) {
+				case 'TABLE':
+					if ( validate_dynamic_table( e ) ) {
+						progressbar_increment( e )
+					} else {
+						progressbar_decrement( e )
+					}
+					break;
+
+				case 'FIELDSET':
+					if ( validate_fieldSet( e ) ) {
+						progressbar_increment( e )
+					} else {
+						progressbar_decrement( e )
+					}
+					break;
+
+				case 'TEXTAREA':
+					if ( e.value !== '' ) {
+						progressbar_increment( e )
+					} else {
+						progressbar_decrement( e )
+					}
+					break;
+
+				case 'SELECT':
+					if ( e.value !== '' ) {
+						progressbar_increment( e )
+					} else {
+						progressbar_decrement( e )
+					}
+					break;
+
+				case 'INPUT':
+					if ( e.value !== '' ) {
+						progressbar_increment( e )
+					} else {
+						progressbar_decrement( e )
+					}
+					break;
+
+				default:
+					if ( $( e ).valid() ) {
+						console.log( e.value )
+						progressbar_increment( e )
+					} else {
+						progressbar_decrement( e )
+					}
+			}
+		}
+
+		function progressbar_decrement( e )
+		{
+			if ( $( e ).data( 'progressbar' ) ) {
+				$( e ).data( 'progressbar', false )
+				progress_bar_value -= per_element_percentage
+				progress_bar_update( progress_bar_value )
+
+			}
+		}
+		function progressbar_increment( e )
+		{
+			if ( !$( e ).data( 'progressbar' ) ) {
+				$( e ).data( 'progressbar', true )
+
+				progress_bar_value += per_element_percentage
+				progress_bar_update( progress_bar_value )
+			}
+		}
+
+		function validate_fieldSet( e )
+		{
+			var checkboxLength = $( e ).find( 'input[type="checkbox"]:checked' ).length
+			// var listElements = $(e).find('input[type="text"]', 'select')
+			// var errorsList = []
+			// listElements.each(function(){
+			// 	if(!$(this).valid()){
+			// 		errorsList.push(this)
+			// 	}
+			// })
+			return !checkboxLength > 0 ? false : true
+		}
+
+		function validate_dynamic_table( e )
+		{
+			var listElements = $( document ).find( e ).find( 'input[type="text"], input[type="number"]' ).
+				not( '[readonly="readonly"]' ).not( '.hidden-trow input[type="text"], .hidden-trow input[type="number"]' );
+
+			var errorsList = []
+			listElements.each( function ()
+			{
+				if ( !$( this ).is( ':valid' ) ) {
+					errorsList.push( this )
+				}
+			} )
+			return errorsList.length > 0 ? false : true
+		}
+
+		initFormValidate()
+
+	</script>
+
+	<script>
+		var $submitButton = $( '.tab-create .actions ul li a[href^="#next"]' );
+		var $selectors = $( '.tab-create .form-group select#subCategory' );
+		$submitButton.attr( 'disabled', 'disabled' );
+
+		$( '.tab-create .form-group select#subCategory' ).change( function ()
+		{
+			var $empty = $selectors.filter( function () { return this.value == ""; } );
+			console.log( "val %o    empty len %o", $( this ).val(), $empty.length );
+			if ( $selectors.filter( function () { return this.value == ""; } ).length == $selectors.length ) {
+				$submitButton.attr( 'disabled', 'disabled' );
+			} else {
+				$submitButton.removeAttr( 'disabled' );
+			}
+		} );
+	</script>
+
+	<script>
+		function isNumberKey( evt )
+		{
+			var charCode = ( evt.which ) ? evt.which : event.keyCode
+			if ( charCode > 31 && ( charCode < 48 || charCode > 57 ) )
+				return false;
+			return true;
+		}    
+	</script>
+	<script type="text/javascript">
+		$( '.DownloadFS' ).click( function ( e )
+		{
+			$( "#FSloader" ).attr( "src", $( this ).attr( 'rel' ) );
+		} );
+	</script>
+
+</body>
+
+</html>

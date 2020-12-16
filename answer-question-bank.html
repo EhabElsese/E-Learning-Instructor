@@ -1,0 +1,523 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>answer-quesstion-bank </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
+    <link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
+
+    <link rel="stylesheet" href="dist/css/theme-en.css">
+    <link rel="stylesheet" href="dist/css/blog-post.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+
+    <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="wrapper">
+        <header class="header-top" header-theme="light">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <div class="top-menu d-flex align-items-center">
+                        <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+                    </div>
+
+                    <div class="top-menu d-flex align-items-center userDrops">
+                        <div class="dropdown mr-20">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.png"
+                                    alt=""></a>
+                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="instructor-profile.html"><i
+                                        class="ik ik-user dropdown-icon"></i>instructor
+                                    profile</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-lock dropdown-icon"></i>change
+                                    password</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i>Log Out</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown spDroplist">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
+                            <div class="dropdown-menu dropdown-menu-left animated bounceInDown">
+                                <ul class="list-unstyled">
+                                    <li><a>English</a></li>
+                                    <li><a>العربية</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="ik ik-bell"></i><span class="badge bg-danger">2</span></a>
+                            <div class="dropdown-menu dropdown-menu-left notification-dropdown"
+                                aria-labelledby="notiDropdown">
+                                <h4 class="header">notifications</h4>
+                                <div class="notifications-wrap">
+                                    <a href="#" class="media">
+                                        <span class="d-flex">
+                                            <i class="ik ik-user"></i>
+                                        </span>
+                                        <span class="media-body">
+                                            <span class="heading-font-family media-heading">Meeting</span>
+                                            <span class="media-content">2020-10-04 - 8 AM ...</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="media">
+                                        <span class="d-flex">
+                                            <i class="ik ik-user"></i>
+                                        </span>
+                                        <span class="media-body">
+                                            <span class="heading-font-family media-heading">Meeting 2</span>
+                                            <span class="media-content">2020-10-04 - 8 AM ...</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="footer"><a href="notifications.html">See All</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrap">
+            <div class="app-sidebar colored">
+                <div class="sidebar-header">
+                    <a class="header-brand" href="#">
+                        <div class="logo-img">
+                            <img src="src/img/logo.png" class="header-brand-img" alt="">
+                        </div>
+                        <span class="text">BFCAI</span>
+                    </a>
+                    <button type="button" class="nav-toggle"><i data-toggle="expanded"
+                            class="ik ik-toggle-right toggle-icon"></i></button>
+                    <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+                </div>
+
+
+                <div class="sidebar-content">
+                    <div class="nav-container">
+                        <nav id="main-menu-navigation" class="navigation-main">
+                            <div class="nav-item active">
+                                <a href="d-instructore.html"><i class="ik ik-home"></i><span>Home</span></a>
+                            </div>
+                            <div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-book"></i><span>My Material</span></a>
+                                <div class="submenu-content">
+                                    <div class="nav-item has-sub">
+                                        <a href="javascript:void(0)"><i class=""></i><span class="ml-15">First
+                                                Semestr</span></a>
+                                        <div class="submenu-content">
+                                            <div class="nav-item has-sub">
+                                                <a href="javascript:void(0)"><i class=""></i><span
+                                                        class="ml-35 ofwhite">GIS</span></a>
+                                                <div class="submenu-content">
+                                                    <a href="add-lecture-1.html"
+                                                        class="menu-item "><span>Lecture</span></a>
+                                                    <a href="#" class="menu-item "><span>Section</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a href="add-course.html"><i class=""></i><span
+                                                        class="ml-35 ofwhite">Add
+                                                        Course</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item has-sub">
+                                        <a href="javascript:void(0)"><i class=""></i><span class="ml-15">Second
+                                                Semestr</span></a>
+                                        <div class="submenu-content">
+                                            <div class="nav-item has-sub">
+                                                <a href="javascript:void(0)"><i class=""></i><span
+                                                        class="ml-25">BIS</span></a>
+                                                <div class="submenu-content">
+                                                    <a href="add-lecture-1.html"
+                                                        class="menu-item"><span>Lecture</span></a>
+                                                    <a href="#" class="menu-item"><span>Section</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="nav-item">
+                                <a href="notifications.html"><i class="ik ik-bell"></i><span>Notifactions</span><span
+                                        class="badge bg-danger">4</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-mail"></i><span>Messages</span><span
+                                        class="badge bg-danger">34</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-message-circle"></i><span>Chat Room</span><span
+                                        class="badge bg-danger">+99</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="students.html"><i class="ik ik-users"></i><span>Students</span></a>
+                            </div>
+                            <div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-message-square"></i><span>Questions
+                                        Bank</span></a>
+                                <div class="submenu-content">
+                                    <a href="question-bank.html" class="menu-item"><span>Questions</span><span
+                                            class="badge bg-danger">15</span></a>
+                                    <a href="answer-question-bank.html" class="menu-item"><span>Answers</span></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-bookmark"></i><span>Announcments</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-info"></i><span>Assigments Result</span></a>
+                            </div>
+                            <div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-clipboard"></i><span>Quiz</span></a>
+								<div class="submenu-content">
+									<a href="add-quiz.htm" class="menu-item"><span>add quiz</span></a>
+									<a href="view-quizes.html" class="menu-item"><span>view quizes</span></a>
+
+								</div>
+							</div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-message-square"></i><span>Feedback</span><span
+                                        class="badge bg-danger">140</span></a>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="main-content">
+                <div class="container-fluid">
+
+                    <div class="page-header">
+                        <div class="row align-items-end">
+                            <div class="col-lg-8">
+                                <div class="page-header-title">
+                                    <i class="ik ik-check-square bg-blue"></i>
+                                    <div class="d-inline">
+                                        <h2>Answer Questions</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <nav class="breadcrumb-container" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="d-instructore.html"><i class="ik ik-home"></i></a>
+                                        </li>
+
+                                        <li class="breadcrumb-item active" aria-current="page">Answer Questions</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-40">
+                        <div class="col-md-12">
+
+                            <div class="listOfDataboxs">
+
+                                <!-- start New card -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4><i class="ik ik-user"></i><a href="#">Ehab Elsese</a></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-10 col-12 col-sm-6 col-lg-11 text-center ">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="countrydata icon-list-item">
+                                                            <i class="ik ik-book"></i>
+                                                            <div class="course-name" style="display: inline-block;">
+                                                                Security</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                    </div>
+                                                </div>
+                                                <div class="Question">
+                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Distinctio nisi nulla voluptas earum sit qui voluptate at non
+                                                        consequatur adipisci dicta, odit ut eos eaque iusto. Officia
+                                                        libero labore consequatur ?</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary test">Show answer </button>
+
+                                    <div class="card-footer">
+                                        <div class="media mt-4 offset-md-1">
+                                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="instructor-pic">
+                                            <div class="media-body">
+                                                <h5 class="mt-0">instructor Name</h5>
+                                                <p>Cras sit amet nibh libero, in gravida nulla.  tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                </p>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-edit "></i></button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media mt-4 offset-md-1">
+                                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="instructor-pic">
+                                            <div class="media-body">
+                                                <h5 class="mt-0 instructor-name">instructor Name</h5>
+                                                <p>Cras sit amet nibh libero, in gravida nulla.  tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                </p>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-edit "></i></button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4><i class="ik ik-user"></i><a href="#">Ehab Elsese</a></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-10 col-12 col-sm-6 col-lg-11 text-center ">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="countrydata icon-list-item">
+                                                            <i class="ik ik-book"></i>
+                                                            <div class="course-name" style="display: inline-block;">
+                                                                Security</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                    </div>
+                                                </div>
+                                                <div class="Question">
+                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Distinctio nisi nulla voluptas earum sit qui voluptate at non
+                                                        consequatur adipisci dicta, odit ut eos eaque iusto. Officia
+                                                        libero labore consequatur ?</p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary test">Show answer </button>
+
+                                    <div class="card-footer  ">
+                                        <div class="media mt-4 offset-md-1">
+                                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="instructor-pic">
+                                            <div class="media-body">
+                                                <h5 class="mt-0">instructor Name</h5>
+                                                <p>Cras sit amet nibh libero, in gravida nulla.  tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                </p>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-edit "></i></button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media mt-4 offset-md-1">
+                                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="instructor-pic">
+                                            <div class="media-body">
+                                                <h5 class="mt-0 instructor-name">instructor Name</h5>
+                                                <p>Cras sit amet nibh libero, in gravida nulla.  tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                                </p>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-edit "></i></button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <!-- Customer overview end -->
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure about the delete ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="confirmDeleteBtn" class="btn btn-danger"
+                        data-dismiss="modal">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editRow" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Edit </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <input type="file" class="form-control">
+                    <input style="margin: 15px 0 ;" type="text" class="form-control" placeholder="Enter lecture name ">
+                    <select class="form-control select2">
+                        <option value="">Select type</option>
+                        <option value="value1">Document</option>
+                        <option value="value2">video</option>
+                        <option value="value3">Assignment</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="confirmDeleteBtn" class="btn btn-primary"
+                        data-dismiss="modal">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!--<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>-->
+    <script src="plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js"></script>
+
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="plugins/screenfull/dist/screenfull.js"></script>
+    <script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/moment/moment.js"></script>
+    <script src="plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+    <script src="plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="plugins/datedropper/datedropper.min.js"></script>
+    <script src="js/form-picker.js"></script>
+
+    <script src="plugins/jquery.repeater/jquery.repeater.js"></script>
+
+    <script type="text/javascript" src="plugins/autocalc/jautocalc.js"></script>
+
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+
+    <script src="dist/js/theme.min.js"></script>
+    <script src="dist/js/custom.js"></script>
+
+    <script src="js/alerts.js"></script>
+
+
+    <script>
+        $( document ).ready( function ()
+        {
+            $('.test').on('click', function () {
+                
+                $(this).next('.card-footer').slideToggle();
+            });
+        } );
+    </script>
+     <script>
+        $( document ).ready( function ()
+        {
+            $( '#advanced_table' ).DataTable( {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.20/i18n/English.json"
+                }
+            } );
+        } );
+    </script>
+
+    <script>
+        $( ".telephone" ).intlTelInput( {
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+        } );
+    </script>
+    <script>
+        CKEDITOR.replace( 'editor1', {
+            extraPlugins: 'placeholder',
+            height: 220
+        } );
+    </script>
+
+
+
+
+</body>
+
+</html>

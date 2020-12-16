@@ -1,0 +1,642 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Student profile</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
+    <link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
+
+    <link rel="stylesheet" href="dist/css/theme-en.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+
+    <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="wrapper">
+        <header class="header-top" header-theme="light">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <div class="top-menu d-flex align-items-center">
+                        <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+                    </div>
+
+                    <div class="top-menu d-flex align-items-center userDrops">
+                        <div class="dropdown mr-20">
+                            <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.png"
+                                    alt=""></a>
+                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="instructor-profile.html"><i
+                                        class="ik ik-user dropdown-icon"></i>instructor
+                                    profile</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-lock dropdown-icon"></i>change
+                                    password</a>
+                                <a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i>Log Out</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown spDroplist">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
+                            <div class="dropdown-menu dropdown-menu-left animated bounceInDown">
+                                <ul class="list-unstyled">
+                                    <li><a>English</a></li>
+                                    <li><a>العربية</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="ik ik-bell"></i><span class="badge bg-danger">2</span></a>
+                            <div class="dropdown-menu dropdown-menu-left notification-dropdown"
+                                aria-labelledby="notiDropdown">
+                                <h4 class="header">notifications</h4>
+                                <div class="notifications-wrap">
+                                    <a href="#" class="media">
+                                        <span class="d-flex">
+                                            <i class="ik ik-user"></i>
+                                        </span>
+                                        <span class="media-body">
+                                            <span class="heading-font-family media-heading">Meeting</span>
+                                            <span class="media-content">2020-10-04 - 8 AM ...</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="media">
+                                        <span class="d-flex">
+                                            <i class="ik ik-user"></i>
+                                        </span>
+                                        <span class="media-body">
+                                            <span class="heading-font-family media-heading">Meeting 2</span>
+                                            <span class="media-content">2020-10-04 - 8 AM ...</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="footer"><a href="notifications.html">See All</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrap">
+            <div class="app-sidebar colored">
+                <div class="sidebar-header">
+                    <a class="header-brand" href="#">
+                        <div class="logo-img">
+                            <img src="src/img/logo.png" class="header-brand-img" alt="">
+                        </div>
+                        <span class="text">BFCAI</span>
+                    </a>
+                    <button type="button" class="nav-toggle"><i data-toggle="expanded"
+                            class="ik ik-toggle-right toggle-icon"></i></button>
+                    <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+                </div>
+
+
+                <div class="sidebar-content">
+                    <div class="nav-container">
+                        <nav id="main-menu-navigation" class="navigation-main">
+                            <div class="nav-item active">
+                                <a href="d-instructore.html"><i class="ik ik-home"></i><span>Home</span></a>
+                            </div>
+                            <div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-book"></i><span>My Material</span></a>
+                                <div class="submenu-content">
+                                    <div class="nav-item has-sub">
+                                        <a href="javascript:void(0)"><i class=""></i><span class="ml-15">First
+                                                Semestr</span></a>
+                                        <div class="submenu-content">
+                                            <div class="nav-item has-sub">
+                                                <a href="javascript:void(0)"><i class=""></i><span
+                                                        class="ml-35 ofwhite">GIS</span></a>
+                                                <div class="submenu-content">
+                                                    <a href="add-lecture-1.html"
+                                                        class="menu-item "><span>Lecture</span></a>
+                                                    <a href="#" class="menu-item "><span>Section</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a href="add-course.html"><i class=""></i><span
+                                                        class="ml-35 ofwhite">Add
+                                                        Course</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item has-sub">
+                                        <a href="javascript:void(0)"><i class=""></i><span class="ml-15">Second
+                                                Semestr</span></a>
+                                        <div class="submenu-content">
+                                            <div class="nav-item has-sub">
+                                                <a href="javascript:void(0)"><i class=""></i><span
+                                                        class="ml-25">BIS</span></a>
+                                                <div class="submenu-content">
+                                                    <a href="add-lecture-1.html"
+                                                        class="menu-item"><span>Lecture</span></a>
+                                                    <a href="#" class="menu-item"><span>Section</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="nav-item">
+                                <a href="notifications.html"><i class="ik ik-bell"></i><span>Notifactions</span><span
+                                        class="badge bg-danger">4</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-mail"></i><span>Messages</span><span
+                                        class="badge bg-danger">34</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-message-circle"></i><span>Chat Room</span><span
+                                        class="badge bg-danger">+99</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="students.html"><i class="ik ik-users"></i><span>Students</span></a>
+                            </div>
+                            <div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-message-square"></i><span>Questions
+                                        Bank</span></a>
+                                <div class="submenu-content">
+                                    <a href="question-bank.html" class="menu-item"><span>Questions</span><span
+                                            class="badge bg-danger">15</span></a>
+                                    <a href="answer-question-bank.html" class="menu-item"><span>Answers</span></a>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-bookmark"></i><span>Announcments</span></a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-info"></i><span>Assigments Result</span></a>
+                            </div>
+                            <div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-clipboard"></i><span>Quiz</span></a>
+                                <div class="submenu-content">
+                                    <a href="add-quiz.htm" class="menu-item"><span>add quiz</span></a>
+                                    <a href="view-quizes.html" class="menu-item"><span>view quizes</span></a>
+
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#"><i class="ik ik-message-square"></i><span>Feedback</span><span
+                                        class="badge bg-danger">140</span></a>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="main-content">
+                <div class="page-header">
+                    <div class="row align-items-end">
+                        <div class="col-lg-8">
+                            <div class="page-header-title">
+                                
+                                <div class="d-inline">
+                                    <a  href="#" role="button"><img class="avatar" src="img/user.png"
+                                    alt="">
+                                    <h2 style="display: contents;">Ehab Elsese</h2>
+                                    <p style="
+                                    margin-top: -20px;
+                                    margin-left: 68px;
+                                    color: cornflowerblue;
+                                    font-size: 16px;
+                                ">ehab160090@fci.bu.edu.eg</p>
+                                </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <nav class="breadcrumb-container" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="d-instructore.html"><i class="ik ik-home"></i></a>
+                                    </li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">Statistics</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Customer overview start -->
+                <div class="row mt-40">
+                    <div class="col-md-6">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>table for quizes grade</h3>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="ik ik-minus minimize-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <div class="table-responsive">
+                                    <table id="advanced_table"
+                                        class="table tableTypeA table-striped table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Quiz_Name</th>
+                                                <th>Quiz_Grade</th>
+                                                <th>Date</th>
+                                                <th>Show</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Quiz 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Quiz 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Quiz 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Quiz 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Quiz Statistic</h3>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="ik ik-minus minimize-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <canvas id="quiz_stat"></canvas>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>table for assigments grade</h3>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="ik ik-minus minimize-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <div class="table-responsive">
+                                    <table id="advanced_table2"
+                                        class="table tableTypeA table-striped table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Ass_Name</th>
+                                                <th>Ass_Grade</th>
+                                                <th>Date</th>
+                                                <th>Show</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Assignment 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Assignment 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Assignment 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"></td>
+                                                <td><strong class="text-dark text-center">Assignment 1</strong></td>
+                                                <td><strong class="text-dark text-center">5</strong></td>
+                                                <td class="text-center text-dark">2020-11-22</td>
+                                                <td class="text-center text-dark">
+                                                    <a data-toggle="tooltip" data-placement="top" title="Show student answer" href="#" class="btn btn-outline-success btn-sm">Show answer</a>
+                                                </td>
+                                            </tr>
+            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Assignments Statistic</h3>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="ik ik-minus minimize-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <canvas id="ass_stat"></canvas>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Statistic for all grade of student in course</h3>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="ik ik-minus minimize-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <canvas id="course_stat"></canvas>
+                            </div>
+                        </div>
+                </div>
+                <!-- Customer overview end -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!--<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>-->
+    <script src="plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="plugins/screenfull/dist/screenfull.js"></script>
+    <script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/moment/moment.js"></script>
+    <script src="plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+    <script src="plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="plugins/datedropper/datedropper.min.js"></script>
+    <script src="js/form-picker.js"></script>
+
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+
+    <script src="dist/js/theme.min.js"></script>
+
+    <script src="js/alerts.js"></script>
+
+
+    <script>
+        $( document ).ready( function () {
+            $( '#advanced_table' ).DataTable( {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.20/i18n/English.json"
+                }
+            } );
+        } );
+        $( document ).ready( function () {
+            $( '#advanced_table2' ).DataTable( {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.20/i18n/English.json"
+                }
+            } );
+        } );
+    </script>
+
+    <script>
+        $( ".telephone" ).intlTelInput( {
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+        } );
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById( 'quiz_stat' ).getContext( '2d' );
+        var chart = new Chart( ctx, {
+            type: 'line',
+
+            data: {
+                labels: [ 'Quiz_1', 'Quiz_2', 'Quiz_4', 'Quiz_5', 'Quiz_6', 'Quiz_7', 'Quiz_8' ],
+                datasets: [ {
+                    label: 'Quizes',
+                    backgroundColor: 'transparent',
+                    borderColor: 'rgb(122, 127, 226)',
+                    data: [ 50, 70, 40, 60, 90, 100, 30, 20 ]
+                } ]
+            },
+
+            // Configuration options go here
+            options: {
+                title: {
+                    display: true,
+                    text: 'Quizes Statistics'
+                },
+                scales: {
+                    yAxes: [ {
+                        position: "left",
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 18,
+                            labelString: "Degree in percentage"
+                        }
+                    } ],
+                    xAxes: [ {
+                        position: "bottom",
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 18,
+                            labelString: "number of Quizes"
+                        },
+                        ticks: {
+                            display: true
+                        }
+                    } ]
+                }
+            }
+        } );
+        var ctx = document.getElementById( 'ass_stat' ).getContext( '2d' );
+        var chart = new Chart( ctx, {
+            type: 'line',
+
+            data: {
+                labels: [ 'Ass_1', 'Ass_2', 'Ass_3', 'Ass_4', 'Ass_5', 'Ass_6', 'Ass_7' ],
+                datasets: [ {
+                    label: 'Assignments',
+                    backgroundColor: 'transparent',
+                    borderColor: 'rgb(221, 28, 28)',
+                    data: [ 20, 80, 30, 70, 40, 60, 50, 100 ]
+                } ]
+            },
+
+            // Configuration options go here
+            options: {
+                title: {
+                    display: true,
+                    text: 'Quizes Statistics'
+                },
+                scales: {
+                    yAxes: [ {
+                        position: "left",
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 18,
+                            labelString: "Degree in percentage"
+                        }
+                    } ],
+                    xAxes: [ {
+                        position: "bottom",
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 18,
+                            labelString: "number of Assignments"
+                        },
+                        ticks: {
+                            display: true
+                        }
+                    } ]
+                }
+            }
+        } );
+        var ctx = document.getElementById( 'course_stat' ).getContext( '2d' );
+        var chart = new Chart( ctx, {
+            type: 'line',
+
+            data: {
+                labels: [ 'Week_1', 'Week_2', 'Week_3', 'Week_4', 'Week_5', 'Week_6', 'Week_7' ],
+                datasets: [ {
+                    label: 'All grade',
+                    backgroundColor: 'transparent',
+                    borderColor: 'rgb(39, 216, 107)',
+                    data: [ 20, 80, 30, 70, 40, 60, 50, 100 ]
+                } ]
+            },
+
+            // Configuration options go here
+            options: {
+                title: {
+                    display: true,
+                    text: 'Course Statistics'
+                },
+                scales: {
+                    yAxes: [ {
+                        position: "left",
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 18,
+                            labelString: "Degree in percentage"
+                        }
+                    } ],
+                    xAxes: [ {
+                        position: "bottom",
+                        scaleLabel: {
+                            display: true,
+                            fontSize: 18,
+                            labelString: "number of Weeks"
+                        },
+                        ticks: {
+                            display: true
+                        }
+                    } ]
+                }
+            }
+        } );
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,547 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Instructor dashboard</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
+    <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+
+    <link href="plugins/wizard/steps.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/theme-en.css">
+    <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="wrapper">
+        <header class="header-top" header-theme="light">
+			<div class="container-fluid">
+				<div class="d-flex justify-content-between">
+					<div class="top-menu d-flex align-items-center">
+						<button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+					</div>
+
+					<div class="top-menu d-flex align-items-center userDrops">
+						<div class="dropdown mr-20">
+							<a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.png"
+									alt=""></a>
+							<div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="instructor-profile.html"><i class="ik ik-user dropdown-icon"></i>instructor
+									profile</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-lock dropdown-icon"></i>change
+									password</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i>Log Out</a>
+							</div>
+						</div>
+
+						<div class="dropdown spDroplist">
+							<a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
+							<div class="dropdown-menu dropdown-menu-left animated bounceInDown">
+								<ul class="list-unstyled">
+									<li><a>English</a></li>
+									<li><a>العربية</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+									class="ik ik-bell"></i><span class="badge bg-danger">2</span></a>
+							<div class="dropdown-menu dropdown-menu-left notification-dropdown"
+								aria-labelledby="notiDropdown">
+								<h4 class="header">notifications</h4>
+								<div class="notifications-wrap">
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting 2</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+								</div>
+								<div class="footer"><a href="notifications.html">See All</a></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="page-wrap">
+			<div class="app-sidebar colored">
+				<div class="sidebar-header">
+					<a class="header-brand" href="#">
+						<div class="logo-img">
+							<img src="src/img/logo.png" class="header-brand-img" alt="">
+						</div>
+						<span class="text">BFCAI</span>
+					</a>
+					<button type="button" class="nav-toggle"><i data-toggle="expanded"
+							class="ik ik-toggle-right toggle-icon"></i></button>
+					<button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+				</div>
+
+
+				<div class="sidebar-content">
+					<div class="nav-container">
+						<nav id="main-menu-navigation" class="navigation-main">
+							<div class="nav-item active">
+								<a href="d-instructore.html"><i class="ik ik-home"></i><span>Home</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-book"></i><span>My Material</span></a>
+								<div class="submenu-content">
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">First
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-35 ofwhite">GIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item "><span>Lecture</span></a>
+													<a href="#"
+														class="menu-item "><span>Section</span></a>
+												</div>
+											</div>
+											<div class="nav-item">
+												<a href="add-course.html"><i class=""></i><span class="ml-35 ofwhite">Add
+														Course</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">Second
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-25">BIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item"><span>Lecture</span></a>
+													<a href="#"
+														class="menu-item"><span>Section</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="nav-item">
+								<a href="notifications.html"><i class="ik ik-bell"></i><span>Notifactions</span><span
+										class="badge bg-danger">4</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-mail"></i><span>Messages</span><span
+										class="badge bg-danger">34</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-circle"></i><span>Chat Room</span><span
+										class="badge bg-danger">+99</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="students.html"><i class="ik ik-users"></i><span>Students</span></a>
+							</div>
+							<div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-message-square"></i><span>Questions Bank</span></a>
+                                <div class="submenu-content">
+                                    <a href="question-bank.html"
+                                        class="menu-item"><span>Questions</span><span
+										class="badge bg-danger">15</span></a>
+                                    <a href="#"
+                                        class="menu-item"><span>Answers</span></a>
+                                </div>
+                            </div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-bookmark"></i><span>Announcments</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-info"></i><span>Assigments Result</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-clipboard"></i><span>Quiz</span></a>
+								<div class="submenu-content">
+									<a href="#" class="menu-item"><span>GIS</span></a>
+									<a href="#" class="menu-item"><span>BIS</span></a>
+
+								</div>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-square"></i><span>Feedback</span><span
+										class="badge bg-danger">140</span></a>
+							</div>
+
+						</nav>
+					</div>
+				</div>
+
+
+
+
+			</div>
+            <div class="main-content">
+                <div class="container-fluid">
+
+
+                    <div class="row mt-30 clearfix">
+
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="state">
+                                            <h5>Students</h5>
+                                            <h2>165</h2>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="ik ik-users"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="state">
+                                            <h5>Messages</h5>
+                                            <h2><span class="badge bg-danger">+99</span></h2>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="ik ik-message-square"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="state">
+                                            <h5>Feedback</h5>
+
+                                        </div>
+                                        <div class="icon">
+                                            <i class="ik ik-trending-up"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+					</div>
+
+					<div class="row mt-4">
+
+                        <div class="col-md-12">
+                            <!-- The time line -->
+                            <ul class="timeline">
+								<div class="timeline-cont">
+									<ul>
+
+										
+									<!-- ased question ///// -->
+									  <li>
+										<span></span>
+										<div class="listOfDataboxs">
+
+											<!-- start New card -->
+											<div class="card">
+												<div class="card-header">
+
+													<div style="width: max-content">
+														<img src="img/user.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
+													</div>
+													<div class="pl-2">
+														<h3 style="width: max-content;">Hamid Balabel</h3>
+														
+														Asked a question in the student questions
+														<span class="s-12"><i class="fas fa-history pr-1"></i>Mon 9/18/2017, 9:54PM</span>
+													</div>
+													
+													
+													<button type="button" class="btn btn-sm btn-success pull-left"
+														data-toggle="modal" data-target="#sendMsg"><i class="ik ik-send"></i>Answer</button>
+												</div>
+												<div class="card-body">
+													<div class="row">
+														<div class="col-md-10 col-12 col-sm-6 col-lg-11 offset-md-1">
+			
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="countrydata icon-list-item">
+																		<i class="ik ik-book"></i>
+																		<div class="course-name" style="display: inline-block;">Security</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																</div>
+															</div>
+															<div class="Question">
+																<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi nulla voluptas earum sit qui voluptate at non consequatur adipisci dicta, odit ut eos eaque iusto. Officia libero labore consequatur ?</p>
+															</div>
+			
+														</div>
+													</div>
+												</div>
+												<div class="card-footer narrow ">
+													<div class="cp ">
+														<div class="votes">
+															<div class="mini-counts"><span title="100 votes">100</span></div>
+															<div>votes</div>
+														</div>
+														<div class="status unanswered">
+															<div class="mini-counts"><span title="0 answers">0</span></div>
+															<div>answers</div>
+														</div>
+														<div class="views">
+															<div class="mini-counts"><span title="200 views">200</span></div>
+															<div>views</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+												
+			
+										</div>
+										<span class="number">
+										  <span><i class="time-icon fas fa-atlas bg-green"></i></span>
+										  <span></span>
+										</span>
+									  </li>
+
+
+
+									  <li>
+										<span></span>
+										<div class="listOfDataboxs">
+
+											<!-- start New card -->
+											<div class="card">
+												<div class="card-header">
+
+													<div style="width: max-content">
+														<img src="img/user.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
+													</div>
+													<div class="pl-2">
+														<h3 style="width: max-content;">Hamid Balabel</h3>
+														
+														Asked a question in the student questions
+														<span class="s-12"><i class="fas fa-history pr-1"></i>Mon 9/18/2017, 9:54PM</span>
+													</div>
+													
+													
+													<button type="button" class="btn btn-sm btn-success pull-left"
+														data-toggle="modal" data-target="#sendMsg"><i class="ik ik-send"></i>Answer</button>
+												</div>
+												<div class="card-body">
+													<div class="row">
+														<div class="col-md-10 col-12 col-sm-6 col-lg-11 offset-md-1">
+			
+															<div class="row">
+																<div class="col-md-6">
+																	<div class="countrydata icon-list-item">
+																		<i class="ik ik-book"></i>
+																		<div class="course-name" style="display: inline-block;">Security</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																</div>
+															</div>
+															<div class="Question">
+																<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi nulla voluptas earum sit qui voluptate at non consequatur adipisci dicta, odit ut eos eaque iusto. Officia libero labore consequatur ?</p>
+															</div>
+			
+														</div>
+													</div>
+												</div>
+												<div class="card-footer narrow ">
+													<div class="cp ">
+														<div class="votes">
+															<div class="mini-counts"><span title="100 votes">100</span></div>
+															<div>votes</div>
+														</div>
+														<div class="status unanswered">
+															<div class="mini-counts"><span title="0 answers">0</span></div>
+															<div>answers</div>
+														</div>
+														<div class="views">
+															<div class="mini-counts"><span title="200 views">200</span></div>
+															<div>views</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+												
+			
+										</div>
+										<span class="number">
+										  <span><i class="time-icon fas fa-atlas bg-green"></i></span>
+										  <span></span>
+										</span>
+									  </li>
+
+
+
+									<!-- an Announcments ///////// -->
+
+									  <li>
+										<span></span>
+										
+
+											<!-- start New card -->
+											<div class="card">
+												<div class="card-header">
+
+													<div style="width: max-content">
+														<img src="img/user.jpg" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
+													</div>
+													<div class="pl-2">
+														<h3 style="width: max-content;">Hamid Balabel</h3>
+														
+														posted an Announcment
+														<span class="s-12"><i class="fas fa-history pr-1"></i>Mon 9/18/2017, 9:54PM</span>
+													</div>
+													
+													
+													
+												</div>
+												<div class="card-body">
+													<div class="row">
+														<div class="col-md-10 col-12 col-sm-6 col-lg-11 offset-md-1">
+			
+															
+															
+															<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi nulla voluptas earum sit qui voluptate at non consequatur adipisci dicta, odit ut eos eaque iusto. Officia libero labore consequatur ?</p>
+															
+			
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											
+												
+			
+										
+										<span class="number">
+										  <span><i class="time-icon far fa-clone bg-orange"></i></span>
+										  <span></span>
+										</span>
+									  </li>
+
+									
+									</ul>
+								  </div>
+							</ul>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+					
+					
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<!--<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>-->
+	
+    <script src="plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="plugins/screenfull/dist/screenfull.js"></script>
+    <script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/moment/moment.js"></script>
+    <script src="plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
+
+    <script src="dist/js/theme.min.js"></script>
+
+    <script src="js/alerts.js"></script>
+
+
+    <script>
+        $( document ).ready( function ()
+        {
+            $( '#advanced_table' ).DataTable( {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.20/i18n/English.json"
+                }
+            } );
+        } );
+    </script>
+
+    <script>
+        $( ".telephone" ).intlTelInput( {
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+        } );
+    </script>
+
+
+</body>
+
+</html>

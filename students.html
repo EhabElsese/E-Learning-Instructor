@@ -1,0 +1,617 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Students</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
+    <link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+
+    <link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
+
+    <link rel="stylesheet" href="dist/css/theme-en.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+
+    <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="wrapper">
+        <header class="header-top" header-theme="light">
+			<div class="container-fluid">
+				<div class="d-flex justify-content-between">
+					<div class="top-menu d-flex align-items-center">
+						<button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+					</div>
+
+					<div class="top-menu d-flex align-items-center userDrops">
+						<div class="dropdown mr-20">
+							<a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.png"
+									alt=""></a>
+							<div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="instructor-profile.html"><i class="ik ik-user dropdown-icon"></i>instructor
+									profile</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-lock dropdown-icon"></i>change
+									password</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i>Log Out</a>
+							</div>
+						</div>
+
+						<div class="dropdown spDroplist">
+							<a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
+							<div class="dropdown-menu dropdown-menu-left animated bounceInDown">
+								<ul class="list-unstyled">
+									<li><a>English</a></li>
+									<li><a>العربية</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+									class="ik ik-bell"></i><span class="badge bg-danger">2</span></a>
+							<div class="dropdown-menu dropdown-menu-left notification-dropdown"
+								aria-labelledby="notiDropdown">
+								<h4 class="header">notifications</h4>
+								<div class="notifications-wrap">
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting 2</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+								</div>
+								<div class="footer"><a href="notifications.html">See All</a></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="page-wrap">
+			<div class="app-sidebar colored">
+				<div class="sidebar-header">
+					<a class="header-brand" href="#">
+						<div class="logo-img">
+							<img src="src/img/logo.png" class="header-brand-img" alt="">
+						</div>
+						<span class="text">BFCAI</span>
+					</a>
+					<button type="button" class="nav-toggle"><i data-toggle="expanded"
+							class="ik ik-toggle-right toggle-icon"></i></button>
+					<button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+				</div>
+
+
+				<div class="sidebar-content">
+					<div class="nav-container">
+						<nav id="main-menu-navigation" class="navigation-main">
+							<div class="nav-item active">
+								<a href="d-instructore.html"><i class="ik ik-home"></i><span>Home</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-book"></i><span>My Material</span></a>
+								<div class="submenu-content">
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">First
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-35 ofwhite">GIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item "><span>Lecture</span></a>
+													<a href="#"
+														class="menu-item "><span>Section</span></a>
+												</div>
+											</div>
+											<div class="nav-item">
+												<a href="add-course.html"><i class=""></i><span class="ml-35 ofwhite">Add
+														Course</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">Second
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-25">BIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item"><span>Lecture</span></a>
+													<a href="#"
+														class="menu-item"><span>Section</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="nav-item">
+								<a href="notifications.html"><i class="ik ik-bell"></i><span>Notifactions</span><span
+										class="badge bg-danger">4</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-mail"></i><span>Messages</span><span
+										class="badge bg-danger">34</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-circle"></i><span>Chat Room</span><span
+										class="badge bg-danger">+99</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="students.html"><i class="ik ik-users"></i><span>Students</span></a>
+							</div>
+							<div class="nav-item has-sub">
+                                <a href="javascript:void(0)"><i class="ik ik-message-square"></i><span>Questions Bank</span></a>
+                                <div class="submenu-content">
+                                    <a href="question-bank.html"
+                                        class="menu-item"><span>Questions</span><span
+										class="badge bg-danger">15</span></a>
+                                    <a href="answer-question-bank.html"
+                                        class="menu-item"><span>Answers</span></a>
+                                </div>
+                            </div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-bookmark"></i><span>Announcments</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-info"></i><span>Assigments Result</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-clipboard"></i><span>Quiz</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-square"></i><span>Feedback</span><span
+										class="badge bg-danger">140</span></a>
+							</div>
+
+						</nav>
+					</div>
+				</div>
+
+
+
+
+			</div>
+            <div class="main-content">
+                <div class="container-fluid">
+
+                    <div class="page-header">
+                        <div class="row align-items-end">
+                            <div class="col-lg-8">
+                                <div class="page-header-title">
+                                    <i class="ik ik-users bg-blue"></i>
+                                    <div class="d-inline">
+                                        <h2>Students</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <nav class="breadcrumb-container" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="d-instructore.html"><i class="ik ik-home"></i></a>
+                                        </li>
+
+                                        <li class="breadcrumb-item active" aria-current="page">Students</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Customer overview start -->
+                    <div class="row mt-40">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Student Table :</h3>
+                                    <div class="card-header-right">
+                                        <ul class="list-unstyled card-option">
+                                            <li><i class="ik ik-minus minimize-card"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body progress-task">
+                                    <div class="dd" data-plugin="nestable">
+                                        <div class="table-responsive">
+                                            <table id="advanced_table"
+                                                class="table   table-bordered table-hover mb-0"
+                                                data-repeater-list="category-group">
+                                                <thead>
+                                                    <tr>
+                                                        <th>NO.</th>
+                                                        <th>Name </th>
+                                                        <th>G.Quizes</th>
+                                                        <th>G.Assignments</th>
+                                                        <th>G.Mid </th>
+                                                        <th>G.Oral</th>
+                                                        <th>G.Project</th>
+                                                        <th>G.lab</th>
+                                                        <th>G.attend</th>
+                                                        <th>Total of Grade</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" type="text" value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Quizes" calcu="G-Quizes"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Assignments" calcu="G-Assignments"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Mid" calcu="G-Mid" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Oral" calcu="G-Oral" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Project" calcu="G-Project"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-lab" calcu="G-lab" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-attend" calcu="G-attend"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control" type="text"
+                                                                name="Total-of-Grade" calcu="Total-of-Grade"
+                                                                jAutoCalc="{G-Quizes} + {G-Assignments} + {G-Mid}+{G-Oral} + {G-Project} + {G-lab} + {G-attend}"
+                                                                value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" type="text" value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Quizes" calcu="G-Quizes"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Assignments" calcu="G-Assignments"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Mid" calcu="G-Mid" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Oral" calcu="G-Oral" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Project" calcu="G-Project"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-lab" calcu="G-lab" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-attend" calcu="G-attend"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control" type="text"
+                                                                name="Total-of-Grade" calcu="Total-of-Grade"
+                                                                jAutoCalc="{G-Quizes} + {G-Assignments} + {G-Mid}+{G-Oral} + {G-Project} + {G-lab} + {G-attend}"
+                                                                value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number"></td>
+                                                        <td><input class="form-control" type="text" value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Quizes" calcu="G-Quizes"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Assignments" calcu="G-Assignments"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Mid" calcu="G-Mid" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Oral" calcu="G-Oral" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-Project" calcu="G-Project"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-lab" calcu="G-lab" value="">
+                                                        </td>
+                                                        <td class="text-center"><input class="form-control"
+                                                                type="number" name="G-attend" calcu="G-attend"
+                                                                value=""></td>
+                                                        <td class="text-center"><input class="form-control" type="text"
+                                                                name="Total-of-Grade" calcu="Total-of-Grade"
+                                                                jAutoCalc="{G-Quizes} + {G-Assignments} + {G-Mid}+{G-Oral} + {G-Project} + {G-lab} + {G-attend}"
+                                                                value=""></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!--<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>-->
+    <script src="plugins/popper.js/dist/umd/popper.min.js"></script>
+    <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="plugins/screenfull/dist/screenfull.js"></script>
+    <script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/moment/moment.js"></script>
+    <script src="plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+    <script type="text/javascript" src="plugins/autocalc/jautocalc.js"></script>
+
+    <script src="plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="plugins/datedropper/datedropper.min.js"></script>
+    <script src="js/form-picker.js"></script>
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+
+    <script src="dist/js/theme.min.js"></script>
+
+    <script src="js/alerts.js"></script>
+
+
+    <script>
+        $( document ).ready( function ()
+        {
+            $( '#advanced_table' ).DataTable( {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.10.20/i18n/English.json"
+                },
+                dom: 'Bfrtip',
+                buttons: [
+
+                    'excel', 'pdf'
+                ]
+            } );
+        } );
+    </script>
+    <script>
+		$( document ).ready( function ()
+		{
+			$( '.otherRowinput' ).hide();
+
+			$( '.showOtherFiled' ).change( function ()
+			{
+				if ( !this.checked )
+					//  ^
+					$( this ).closest( ".row" ).find( ".otherRowinput" ).toggle( 'fast' );
+				else
+					$( this ).closest( ".row" ).find( ".otherRowinput" ).toggle( 'fast' );
+
+
+			} );
+		} );
+	</script>
+
+
+	<script>
+		function SelectCheck( nameSelect )
+		{
+			if ( nameSelect ) {
+				admOptionValue = document.getElementById( "showOtherOption" ).value;
+				if ( admOptionValue == nameSelect.value ) {
+					document.getElementById( "selectOther" ).style.display = "block";
+				}
+				else {
+					document.getElementById( "selectOther" ).style.display = "none";
+				}
+			}
+			else {
+				document.getElementById( "selectOther" ).style.display = "none";
+			}
+		}
+
+	</script>
+	<script>
+		$( 'a[href="#next"]' ).click( function ( event )
+		{
+
+			// Fetch form to apply custom Bootstrap validation
+			var form = $( ".tab-wizard" )
+
+			if ( form[ 0 ].checkValidity() === false ) {
+				event.preventDefault()
+				event.stopPropagation()
+			}
+
+			form.addClass( 'was-validated' );
+			// Perform ajax submit here...
+
+		} );
+	</script>
+
+
+
+	<script>
+
+		var catAndActs = {};
+		catAndActs[ 'value1' ] = [ '1', '1', '1', '1', '1' ];
+		catAndActs[ 'value2' ] = [ '2', '2', '2', '2' ];
+		catAndActs[ 'value3' ] = [ '3', '3', '3', '3', '3', '3' ];
+		catAndActs[ 'value4' ] = [ '4', '4', '4', '4', '4', '4', '4', '4', '4' ];
+		catAndActs[ 'value5' ] = [ '5' ];
+		catAndActs[ 'value6' ] = [ '6' ];
+		catAndActs[ 'value7' ] = [ '7', '7' ];
+		catAndActs[ 'value8' ] = [ '8', '8' ];
+		catAndActs[ 'value9' ] = [ '9', '9' ];
+		catAndActs[ 'value10' ] = [ '00', '00' ];
+		catAndActs[ 'value11' ] = [ '00', '00' ];
+		catAndActs[ 'value12' ] = [ '00', '00' ];
+		catAndActs[ 'value13' ] = [ '00', '00' ];
+		catAndActs[ 'value14' ] = [ '00', '00' ];
+		catAndActs[ 'value15' ] = [ '00', '00' ];
+		catAndActs[ 'value16' ] = [ '00', '00' ];
+
+		function ChangecatList()
+		{
+			var catList = document.getElementById( "mainCategory" );
+			var actList = document.getElementById( "subCategory" );
+			var selCat = catList.options[ catList.selectedIndex ].value;
+			while ( actList.options.length ) {
+				actList.remove( 0 );
+			}
+			var cats = catAndActs[ selCat ];
+			if ( cats ) {
+				var i;
+				for ( i = 0; i < cats.length; i++ ) {
+					var cat = new Option( cats[ i ], i );
+					actList.options.add( cat );
+				}
+			}
+		} 
+	</script>
+
+
+	<script>
+		$( document ).ready( function ()
+		{
+
+			$( '#deleteRow' ).on( 'shown.bs.modal', function ( e )
+			{
+				// store the clicked element as data on the confirm button
+				$( '#confirmDeleteBtn' ).data( 'triggered-from', e.relatedTarget );
+			} );
+
+			$( "#confirmDeleteBtn" ).click( function ()
+			{
+				// retrieve the button that triggered the action and use it
+				var trigger = $( this ).data( 'triggered-from' );
+				$( trigger ).closest( 'tr' ).remove();
+				$( '#deleteRow' ).modal( 'hide' );
+			} );
+
+		} );
+
+	</script>
+
+	<script>
+		$( function ()
+		{
+			var requiredCheckboxes = $( '.form-checkbox :checkbox[required]' );
+			requiredCheckboxes.change( function ()
+			{
+				if ( requiredCheckboxes.is( ':checked' ) ) {
+					requiredCheckboxes.removeAttr( 'required' );
+				} else {
+					requiredCheckboxes.attr( 'required', 'required' );
+				}
+			} );
+		} );
+	</script>
+
+	<script type="text/javascript">
+         !--
+			$( document ).ready( function ()
+			{
+
+				function autoCalcSetup()
+				{
+					$( 'table' ).jAutoCalc( 'destroy' );
+					$( 'table tr' ).jAutoCalc( { keyEventsFire: true, decimalPlaces: 2, emptyAsZero: true } );
+					$( 'table' ).jAutoCalc( { decimalPlaces: 2 } );
+				}
+				autoCalcSetup();
+
+			} );
+
+
+		$( ".table input" ).on( "keypress keyup blur", function ( event )
+		{
+			//this.value = this.value.replace(/[^0-9\.]/g,'');
+			$( this ).val( $( this ).val().replace( /[^0-9\.]/g, '' ) );
+			if ( ( event.which != 46 || $( this ).val().indexOf( '.' ) != -1 ) && ( event.which < 48 || event.which > 57 ) ) {
+				event.preventDefault();
+			}
+		} );
+
+
+
+		$( '.table input' ).on( 'keyup keydown', function ( e )
+		{
+			console.log( $( this ).val() > 1000000000000000 )
+			if ( $( this ).val() > 1000000000000000
+				&& e.keyCode !== 46
+				&& e.keyCode !== 8
+			) {
+				e.preventDefault();
+				$( this ).val( 1000000000000000 );
+			}
+		} );
+
+
+        //-->
+	</script>
+
+</body>
+
+</html>

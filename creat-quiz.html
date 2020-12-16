@@ -1,0 +1,1289 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Qiuz</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
+	<link rel="stylesheet" href="plugins/datetimepicker/jquery.datetimepicker.min.css">
+	<link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
+	<link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+
+	<link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
+
+	<link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+
+	<link rel="stylesheet" href="plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
+	<link href="plugins/wizard/steps-ar.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="dist/css/theme-en.css">
+
+	<script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+	<style>
+		.creat-question:not(:first-of-type){
+    	display: none;
+		}
+		.quiz-model{
+    display:none;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+	<div class="wrapper">
+		<header class="header-top" header-theme="light">
+			<div class="container-fluid">
+				<div class="d-flex justify-content-between">
+					<div class="top-menu d-flex align-items-center">
+						<button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+					</div>
+
+					<div class="top-menu d-flex align-items-center userDrops">
+						<div class="dropdown mr-20">
+							<a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.png"
+									alt=""></a>
+							<div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="instructor-profile.html"><i
+										class="ik ik-user dropdown-icon"></i>instructor
+									profile</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-lock dropdown-icon"></i>change
+									password</a>
+								<a class="dropdown-item" href="#"><i class="ik ik-power dropdown-icon"></i>Log Out</a>
+							</div>
+						</div>
+
+						<div class="dropdown spDroplist">
+							<a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"></i></a>
+							<div class="dropdown-menu dropdown-menu-left animated bounceInDown">
+								<ul class="list-unstyled">
+									<li><a>English</a></li>
+									<li><a>العربية</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+									class="ik ik-bell"></i><span class="badge bg-danger">2</span></a>
+							<div class="dropdown-menu dropdown-menu-left notification-dropdown"
+								aria-labelledby="notiDropdown">
+								<h4 class="header">notifications</h4>
+								<div class="notifications-wrap">
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+									<a href="#" class="media">
+										<span class="d-flex">
+											<i class="ik ik-user"></i>
+										</span>
+										<span class="media-body">
+											<span class="heading-font-family media-heading">Meeting 2</span>
+											<span class="media-content">2020-10-04 - 8 AM ...</span>
+										</span>
+									</a>
+								</div>
+								<div class="footer"><a href="notifications.html">See All</a></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="page-wrap">
+			<div class="app-sidebar colored">
+				<div class="sidebar-header">
+					<a class="header-brand" href="#">
+						<div class="logo-img">
+							<img src="src/img/logo.png" class="header-brand-img" alt="">
+						</div>
+						<span class="text">BFCAI</span>
+					</a>
+					<button type="button" class="nav-toggle"><i data-toggle="expanded"
+							class="ik ik-toggle-right toggle-icon"></i></button>
+					<button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+				</div>
+
+
+				<div class="sidebar-content">
+					<div class="nav-container">
+						<nav id="main-menu-navigation" class="navigation-main">
+							<div class="nav-item active">
+								<a href="d-instructore.html"><i class="ik ik-home"></i><span>Home</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-book"></i><span>My Material</span></a>
+								<div class="submenu-content">
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">First
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-35 ofwhite">GIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item "><span>Lecture</span></a>
+													<a href="#" class="menu-item "><span>Section</span></a>
+												</div>
+											</div>
+											<div class="nav-item">
+												<a href="add-course.html"><i class=""></i><span
+														class="ml-35 ofwhite">Add
+														Course</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="nav-item has-sub">
+										<a href="javascript:void(0)"><i class=""></i><span class="ml-15">Second
+												Semestr</span></a>
+										<div class="submenu-content">
+											<div class="nav-item has-sub">
+												<a href="javascript:void(0)"><i class=""></i><span
+														class="ml-25">BIS</span></a>
+												<div class="submenu-content">
+													<a href="add-lecture-1.html"
+														class="menu-item"><span>Lecture</span></a>
+													<a href="#" class="menu-item"><span>Section</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="nav-item">
+								<a href="notifications.html"><i class="ik ik-bell"></i><span>Notifactions</span><span
+										class="badge bg-danger">4</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-mail"></i><span>Messages</span><span
+										class="badge bg-danger">34</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-circle"></i><span>Chat Room</span><span
+										class="badge bg-danger">+99</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="students.html"><i class="ik ik-users"></i><span>Students</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-message-square"></i><span>Questions
+										Bank</span></a>
+								<div class="submenu-content">
+									<a href="question-bank.html" class="menu-item"><span>Questions</span><span
+											class="badge bg-danger">15</span></a>
+									<a href="#" class="menu-item"><span>Answers</span></a>
+								</div>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-bookmark"></i><span>Announcments</span></a>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-info"></i><span>Assigments Result</span></a>
+							</div>
+							<div class="nav-item has-sub">
+								<a href="javascript:void(0)"><i class="ik ik-clipboard"></i><span>Quiz</span></a>
+								<div class="submenu-content">
+									<a href="#" class="menu-item"><span>GIS</span></a>
+									<a href="#" class="menu-item"><span>BIS</span></a>
+
+								</div>
+							</div>
+							<div class="nav-item">
+								<a href="#"><i class="ik ik-message-square"></i><span>Feedback</span><span
+										class="badge bg-danger">140</span></a>
+							</div>
+
+						</nav>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<div class="main-content">
+				<div class="container-fluid">
+
+					<div class="page-header">
+						<div class="row align-items-end">
+							<div class="col-lg-8">
+								<div class="page-header-title">
+									<i class="ik ik-check-circle bg-blue"></i>
+									<div class="d-inline">
+										<h2>Quiz</h2>
+										<span>create online quiz.</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<nav class="breadcrumb-container" aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="d-instructore.html"><i class="ik ik-home"></i></a>
+										</li>
+										<a href="quiz.html" class="menu-item">/cteate quiz</a>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Customer overview start -->
+					<div class="row mt-40">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<h3>Create Quiz</h3>
+									<div class="card-header-right">
+										<ul class="list-unstyled card-option">
+											<li><i class="ik ik-minus minimize-card"></i></li>
+										</ul>
+									</div>
+								</div>
+								<div class="card-body wizard-content">
+									<div class="dd" data-plugin="nestable">
+
+
+
+
+										<form action="#"
+											class="vertical-tab-steps wizard-notification wizard clearfix vertical"
+											data-toggle="validator">
+
+											<!-- Step 1 -->
+											<h6>General Data</h6>
+											<section>
+
+
+												<!-- ============================================================== -->
+												<!-- start New Row -->
+												<div class="row">
+													<div class="col-md-10 offset-md-1">
+
+														<div class="row">
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="quiz name">Quiz Name :</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-clipboard"></i>
+																			</div>
+																		</div>
+																		<input id="name" name="name"
+																			placeholder="Quiz Name" type="text"
+																			required="required" class="form-control">
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="type">type of quiz :</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-arrow-left"></i>
+																			</div>
+																		</div>
+																		<select class="form-control question-sort" id="type"
+																			name="type" required>
+																			<option>select type</option>
+																			<option value="mcq" class="mcq" data-class=".quiz-model">choices</option>
+																			<option value="tf" class="tf" data-class=".quiz-model2">True & False </option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="grade">Enter Grade :</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-award"></i>
+																			</div>
+																		</div>
+																		<input value="" type="number" min="10" id="age"
+																			name="grade" placeholder="Quiz Grade"
+																			class="form-control" required="">
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="time">Enter time of quiz by minute
+																		:</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-clock"></i>
+																			</div>
+																		</div>
+																		<input name="time" placeholder="Enter time"
+																			type="number" required="required"
+																			class="form-control">
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label>Enter the date on which the quiz will begin
+																		:</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-calendar"></i>
+																			</div>
+																		</div>
+																		<input id="datetime2"
+																			class="form-control pull-right">
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="form-group">
+																	<label for="grade">Enter number of questions :</label>
+																	<div class="input-group">
+																		<div class="input-group-prepend">
+																			<div class="input-group-text">
+																				<i class="ik ik-chevron-right"></i>
+																			</div>
+																		</div>
+																		<input value="" type="number" min="10"
+																			name="n_questions" placeholder="number of questions"
+																			class="form-control" required="">
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-md-12">
+																<div class="form-group">
+																	<label>Quiz Description :</label>
+
+
+																	<textarea name="editor1" id="editor1"></textarea>
+
+																</div>
+															</div>
+
+
+														</div>
+
+
+													</div>
+												</div>
+
+
+											</section>
+
+
+
+
+											<!-- Step 3 -->
+											<h6>Questions</h6>
+											<section>
+											
+											
+												<div class="row quiz-model">
+													<div class="col-md-10 offset-md-1">
+											
+														<div class="row the-questions">
+											
+											
+															<div class="col-md-12">
+																<div class="form-group creat-question question1">
+																	<label>the question No.1:</label>
+											
+											
+																	<textarea name="editor2" class="editor2"></textarea>
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>Enter
+																		the choices</label>
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+
+																					<div class="answer">
+
+																						<input class="correct-ans" type="checkbox" >
+																						
+																						<span class="num-ans pl-1" >A)</span>
+																						<div class=" pr-3" style="width: 85%; float: right;">
+																							
+																							<input class="form-control ">
+																						</div>
+																					</div>
+											
+																					
+																				</div>
+
+																				<div class="col-md-12 col-xl-6 mb-4">
+
+																					<div class="answer">
+
+																						<input class="correct-ans" type="checkbox" >
+																						
+																						<span class="num-ans pl-1" >B)</span>
+																						<div class=" pr-3" style="width: 85%; float: right;">
+																							
+																							<input class="form-control ">
+																						</div>
+																					</div>
+											
+																					
+																				</div>
+
+																				<div class="col-md-12 col-xl-6 mb-4">
+
+																					<div class="answer">
+
+																						<input class="correct-ans" type="checkbox" >
+																						
+																						<span class="num-ans pl-1" >C)</span>
+																						<div class=" pr-3" style="width: 85%; float: right;">
+																							
+																							<input class="form-control ">
+																						</div>
+																					</div>
+											
+																					
+																				</div>
+
+																				<div class="col-md-12 col-xl-6 mb-4">
+
+																					<div class="answer">
+
+																						<input class="correct-ans" type="checkbox" >
+																						
+																						<span class="num-ans pl-1" >D)</span>
+																						<div class=" pr-3" style="width: 85%; float: right;">
+																							
+																							<input class="form-control ">
+																						</div>
+																					</div>
+											
+																					
+																				</div>
+
+																				
+
+
+											
+																				
+																			</div>
+																		</div>
+											
+																	</div>
+																</div>
+											
+																<div class="form-group creat-question question2">
+																	<label>the question No.2:</label>
+											
+											
+																	<textarea name="editor3" id="editor3"></textarea>
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>Enetr
+																		the choices</label>
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="A1">
+																						<label class="border-checkbox-label " for="A1">
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">A)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0; margin-top: -3%">
+																									<input class="form-control ">
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+											
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="B1">
+																						<label class="border-checkbox-label " for="B1">
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">B)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0; margin-top: -3%">
+																									<input class="form-control ">
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+											
+											
+																				<div class="col-md-12 col-xl-6  mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="C1">
+																						<label class="border-checkbox-label " for="C1">
+											
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">C)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0; margin-top: -3%">
+																									<input class="form-control ">
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+											
+											
+																				<div class="col-md-12 col-xl-6  mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="D1">
+																						<label class="border-checkbox-label " for="D1">
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">D)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0; margin-top: -3%">
+																									<input class="form-control ">
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+											
+																	</div><input type="submit" name="" id="">
+																</div>
+											
+																
+											
+											
+											
+											
+																<nav class="quest-selection" aria-label="...">
+																	<ul class="pagination m-auto" style="width: max-content;">
+											
+																		<li class="page-item active" data-class=".question1"><a class="page-link" href="#">1</a>
+																		</li>
+											
+																		<li class="page-item " data-class=".question2">
+																			<a class="page-link" href="#">2</a>
+																		</li>
+																		<li class="page-item" data-class=".question3"><a class="page-link" href="#">3</a>
+																		</li>
+											
+											
+																	</ul>
+																</nav>
+															</div>
+											
+											
+														</div>
+											
+											
+											
+													</div>
+												</div>
+												<div class="row quiz-model2">
+													<div class="col-md-10 offset-md-1">
+											
+														<div class="row the-questions">
+											
+											
+															<div class="col-md-12 ">
+																<div class="form-group creat-question question1">
+																	<label>question No.1 :</label>
+											
+											
+																	<textarea name="editor5" id="editor5"></textarea>
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>Select the correct :</label>
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="offset-md-3 col-md-3 col-sm-12 mb-4">
+                                                    
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="radio" class="form-check-input" name="quest1" style="cursor: pointer;">True
+																						</label>
+																					</div>
+																
+																				</div>
+																
+																
+																				<div class="col-md-3 mb-4 col-sm-12">
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="radio" class="form-check-input" name="quest1" style="cursor: pointer;">False
+																						</label>
+																					</div>
+																				</div>
+														
+											
+											
+											
+																			</div>
+																		</div>
+											
+																	</div>
+																</div>
+											
+																<div class="form-group creat-question question2">
+																	<label>question No.2 :</label>
+											
+											
+																	<textarea name="editor6" id="editor6"></textarea>
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>Select the correct :</label>
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="offset-md-3 col-md-3 col-sm-12 mb-4">
+											
+																					<div class="custom-control custom-radio">
+																						<input type="radio" class="custom-control-input " id="Checke3" name="defaultExampleRadios">
+																						<label class="custom-control-label" style="font-size: large;" for="Checke3">True</label>
+																					</div>
+											
+																				</div>
+											
+											
+																				<div class="col-md-3 mb-4 col-sm-12">
+																					<div class="custom-control custom-radio">
+																						<input type="radio" class="custom-control-input " id="Checke4" name="defaultExampleRadios">
+																						<label class="custom-control-label" style="font-size: large;" for="Checke4">False</label>
+																					</div>
+																				</div>
+											
+											
+																			</div>
+																		</div>
+											
+																	</div>
+																</div>
+											
+																<div class="form-group creat-question question3">
+																	<label>question No.3 :</label>
+											
+											
+																	<textarea name="editor7" id="editor7"></textarea>
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>Select the correct :</label>
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="offset-md-3 col-md-3 col-sm-12 mb-4">
+											
+																					<div class="custom-control custom-radio">
+																						<input type="radio" class="custom-control-input " id="Checke5" name="defaultExampleRadios">
+																						<label class="custom-control-label" style="font-size: large;" for="Checke5">True</label>
+																					</div>
+											
+																				</div>
+											
+											
+																				<div class="col-md-3 mb-4 col-sm-12">
+																					<div class="custom-control custom-radio">
+																						<input type="radio" class="custom-control-input " id="Checke6" name="defaultExampleRadios">
+																						<label class="custom-control-label" style="font-size: large;" for="Checke6">False</label>
+																					</div>
+																				</div>
+											
+											
+											
+																			</div>
+																		</div>
+											
+																	</div>
+																</div>
+											
+											
+																<nav class="quest-selection" aria-label="...">
+																	<ul class="pagination m-auto" style="width: max-content;">
+											
+																		<li class="page-item active" data-class=".question1"><a class="page-link" href="#">1</a>
+																		</li>
+											
+																		<li class="page-item " data-class=".question2">
+																			<a class="page-link" href="#">2</a>
+																		</li>
+																		<li class="page-item" data-class=".question3"><a class="page-link" href="#">3</a>
+																		</li>
+											
+											
+																	</ul>
+																</nav>
+											
+															</div>
+											
+											
+														</div>
+											
+											
+													</div>
+												</div>
+												<div class="row no-select">
+													<div class="col-md-10 offset-md-1">
+											
+														<div class="alert alert-danger" role="alert">
+															Please select the sort of the quiz
+														</div>
+											
+											
+													</div>
+												</div>
+												
+											</section>
+											
+
+											
+																
+																
+												
+											
+											
+
+											
+											<!-- Step 4 -->
+
+											<h6>View Quiz</h6>
+											<section>
+											
+											
+												<div class="row">
+													<div class="col-md-10 offset-md-1">
+											
+														<div class="row quiz-model">
+											
+											
+															<div class="col-md-12">
+																<div class="form-group">
+																	<label>Answer the following questions :</label>
+											
+											
+											
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>choose the correct answer ? </label>
+											
+											
+											
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="answer">
+																						<input  type="checkbox" style="cursor: pointer;" >
+																						<label  style="font-size: 17px; font-weight: bold;">
+																							<span class="pr-3 pl-1">A)</span>
+																							answer number A
+																						</label>
+																					</div>
+																				</div>
+											
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="answer">
+																						<input  type="checkbox" style="cursor: pointer;" >
+																						<label  style="font-size: 17px; font-weight: bold;">
+																							<span class="pr-3 pl-1">B)</span>
+																							answer number B
+																						</label>
+																					</div>
+																				</div>
+
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="answer">
+																						<input  type="checkbox" style="cursor: pointer;" >
+																						<label  style="font-size: 17px; font-weight: bold;">
+																							<span class="pr-3 pl-1">C)</span>
+																							answer number C
+																						</label>
+																					</div>
+																				</div>
+
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="answer">
+																						<input  type="checkbox" style="cursor: pointer;" >
+																						<label  style="font-size: 17px; font-weight: bold;">
+																							<span class="pr-3 pl-1">C)</span>
+																							answer number C
+																						</label>
+																					</div>
+																				</div>
+
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="answer">
+																						<input  type="checkbox" style="cursor: pointer;" >
+																						<label  style="font-size: 17px; font-weight: bold;">
+																							<span class="pr-3 pl-1">D)</span>
+																							answer number D
+																						</label>
+																					</div>
+																				</div>
+																				
+											
+											
+																			</div>
+																		</div>
+											
+																	</div>
+											
+											
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>choose the correct answer ? </label>
+											
+											
+											
+											
+											
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="5">
+																						<label class="border-checkbox-label " for="5">
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">A)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0;font-size: 17px; ">
+																									answer number A
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+											
+											
+																				<div class="col-md-12 col-xl-6 mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="6">
+																						<label class="border-checkbox-label " for="6">
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">B)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0;font-size: 17px; ">
+																									answer number B
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+											
+											
+																				
+											
+											
+																				<div class="col-md-12 col-xl-6  mb-4">
+											
+																					<div class="border-checkbox-group border-checkbox-group-primary " style="display:grid">
+																						<input class="border-checkbox" type="checkbox" id="8">
+																						<label class="border-checkbox-label " for="8">
+																							<div class="row">
+																								<div class="col-2" style="padding-right: inherit;">
+																									<span style="font-size: 17px">D)</span>
+																								</div>
+																								<div class="col-10" style="padding: 0;font-size: 17px; ">
+																									answer number D
+																								</div>
+											
+																							</div>
+											
+																						</label>
+																					</div>
+																				</div>
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+																			</div>
+																		</div>
+											
+																	</div>
+											
+																</div>
+															</div>
+											
+											
+														</div>
+
+														<div class="row quiz-model2">
+														
+														
+															<div class="col-md-12">
+																<div class="form-group">
+																	<label>Answer the following questions :</label>
+														
+														
+														
+														
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>This
+																		question has true of false answer ? </label>
+														
+														
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+														
+																				<div class="offset-md-3 col-md-3 col-sm-12 mb-4">
+                                                    
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="radio" class="form-check-input" name="quest1" style="cursor: pointer;">True
+																						</label>
+																					</div>
+																
+																				</div>
+																
+																
+																				<div class="col-md-3 mb-4 col-sm-12">
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="radio" class="form-check-input" name="quest1" style="cursor: pointer;">False
+																						</label>
+																					</div>
+																				</div>
+														
+														
+																			</div>
+																		</div>
+														
+																	</div>
+														
+														
+																</div>
+															</div>
+
+															<div class="col-md-12">
+																<div class="form-group">
+														
+														
+														
+														
+																	<label for="requriedSkilles" class="mt-4"> <i data-toggle="tooltip" data-placement="top" title=""
+																			class="ik ik-info mx-2" data-original-title="Type the choices"></i>This
+																		question has true of false answer ? </label>
+														
+														
+																	<div class="form-group mt-30">
+																		<div class="border-checkbox-section">
+																			<div class="row">
+														
+																				<div class="offset-md-3 col-md-3 col-sm-12 mb-4">
+                                                    
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="radio" class="form-check-input" name="quest2" style="cursor: pointer;">True
+																						</label>
+																					</div>
+																
+																				</div>
+																
+																
+																				<div class="col-md-3 mb-4 col-sm-12">
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="radio" class="form-check-input" name="quest2" style="cursor: pointer;">False
+																						</label>
+																					</div>
+																				</div>
+														
+														
+																			</div>
+																		</div>
+														
+																	</div>
+														
+														
+																</div>
+															</div>
+														
+														
+														</div>
+											
+														<div class="row no-select">
+															<div class="col-md-10 offset-md-1">
+													
+																<div class="alert alert-danger" role="alert">
+																	Please select the sort of the quiz
+																</div>
+													
+													
+															</div>
+														</div>
+											
+											
+													</div>
+												</div>
+											
+											</section>
+
+
+
+
+										</form>
+
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Customer overview end -->
+
+
+
+
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<!--<script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>-->
+	<script src="plugins/popper.js/dist/umd/popper.min.js"></script>
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="plugins/screenfull/dist/screenfull.js"></script>
+	<script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+	<script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js"></script>
+
+	<script src="plugins/moment/moment.js"></script>
+	<script src="plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+	<script src="plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="plugins/datedropper/datedropper.min.js"></script>
+	<script src="js/form-picker.js"></script>
+
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>-->
+
+	<script src="plugins/wizard/jquery.steps.min.js"></script>
+
+	<script src="dist/js/theme.min.js"></script>
+
+	<script src="js/alerts.js"></script>
+	<script src="js/form-components.js"></script>
+
+	
+
+
+
+	<script>
+		$(".vertical-tab-steps").steps({
+			headerTag: "h6",
+			bodyTag: "section",
+			enableAllSteps: true,
+			enablePagination: true,
+			enableKeyNavigation: true,
+			enableFinishButton: true,
+			forceMoveForward: false,
+			anchorSettings: {
+				anchorClickable: true,
+				enableAllAnchors: true,
+				markDoneStep: true,
+				enableAnchorOnDoneStep: true
+			},
+			transitionEffect: "fade",
+			titleTemplate: '<span class="step">#index#</span> #title#',
+			labels: {
+				finish: "Save",
+				next: "Next",
+				previous: "previous",
+			},
+			onFinished: function (event, currentIndex) {
+				var form = $(this);
+				// Submit form input
+				form.submit();
+
+			}
+
+		});
+	</script>
+	<script src="plugins/datetimepicker/jquery.datetimepicker.full.js"></script>
+	<script>
+		$("#datetime2").datetimepicker();
+
+	</script>
+	<script>
+		CKEDITOR.replace('editor1', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+		CKEDITOR.replace('editor2', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+		CKEDITOR.replace('editor3', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+		CKEDITOR.replace('editor4', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+		CKEDITOR.replace('editor5', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+		CKEDITOR.replace('editor6', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+		CKEDITOR.replace('editor7', {
+			extraPlugins: 'placeholder',
+			height: 100
+		});
+	</script>
+	
+
+	<script>
+		
+		$('.quest-selection ul li').on('click', function () {
+
+			$(this).addClass('active').siblings().removeClass('active');
+
+			$('.the-questions .creat-question').css('display', 'none');
+			$($(this).data('class')).css('display', 'block');
+
+
+		});
+		
+		
+		
+	</script>
+
+	<script>
+
+		$('#type').on('change',function(){
+			var e = document.getElementById("type");
+			var strsort = e.options[e.selectedIndex].value;
+
+			if(strsort=="mcq"){
+				$('.quiz-model').css('display', 'block');
+			 	$('.quiz-model2').css('display', 'none');
+				$('.no-select').css('display','none')
+			}
+			else if (strsort=="tf") {
+				$('.quiz-model').css('display', 'none');
+			 	$('.quiz-model2').css('display', 'block');
+				$('.no-select').css('display','none')
+			} 
+			else {
+				$('.quiz-model').css('display', 'none');
+			 	$('.quiz-model2').css('display', 'none');
+				$('.no-select').css('display','block')
+			}
+
+		});
+
+	</script>
+
+
+
+</body>
+
+</html>
